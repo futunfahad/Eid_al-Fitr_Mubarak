@@ -17,23 +17,26 @@ document.getElementById('generateBtn').addEventListener('click', function() {
             // Calculate canvas dimensions to fit the image container
             var maxWidth = imageContainer.clientWidth;
             var maxHeight = imageContainer.clientHeight;
-            var canvasWidth = maxWidth;
-            var canvasHeight = canvasWidth / aspectRatio;
+            var canvasWidth = Math.floor(maxWidth * window.devicePixelRatio);
+            var canvasHeight = Math.floor(canvasWidth / aspectRatio);
 
-            // Resize canvas and draw background image
+            // Scale canvas for high-resolution displays
             canvas.width = canvasWidth;
             canvas.height = canvasHeight;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+            // Resize canvas and draw background image
             ctx.drawImage(backgroundImage, 0, 0, canvasWidth, canvasHeight);
 
             // Calculate font size relative to image height
-            var fontSizePercentage = 0.05; // Adjust as needed (e.g., 0.1 = 10% of image height)
+            var fontSizePercentage = 0.1; // Adjust as needed (e.g., 0.1 = 10% of image height)
             var fontSize = Math.floor(canvasHeight * fontSizePercentage);
 
             // Draw name on the canvas
             ctx.font = fontSize + 'px Arial';
             var textWidth = ctx.measureText(name).width;
             var textX = (canvasWidth - textWidth) / 2; // X position for centering text horizontally
-            var textY = (canvasHeight / 2)+(canvasHeight*0.351); // Y position for centering text vertically
+            var textY = canvasHeight / 2; // Y position for centering text vertically
 
             ctx.fillStyle = '#000';
             ctx.fillText(name, textX, textY); // Position the name in the middle
@@ -47,7 +50,7 @@ document.getElementById('generateBtn').addEventListener('click', function() {
             // Create download link
             var downloadLink = document.createElement('a');
             downloadLink.classList.add('button-link');
-            downloadLink.textContent = 'حمل الصورة';
+            downloadLink.textContent = 'Download Image';
             downloadLink.href = canvas.toDataURL('image/png');
             downloadLink.download = 'custom_image.png';
             imageContainer.appendChild(downloadLink);
@@ -59,3 +62,5 @@ document.getElementById('generateBtn').addEventListener('click', function() {
         alert('Please enter a name.');
     }
 });
+
+
