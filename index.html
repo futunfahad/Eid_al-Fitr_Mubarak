@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Image Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <head>
+      <img src="pngegg.png" alt="" srcset="" class="aid" />
+    </head>
+    <div class="container">
+      <h1>عيدكم مبارك</h1>
+      <label for="nameInput">ادخل اسمك</label>
+      <input type="text" id="nameInput" placeholder="Your Name" />
+      <dev class="hidden">
+        <label for="backgroundSizeInput">Background Image Size:</label>
+        <input
+          type="text"
+          id="backgroundSizeInput"
+          placeholder="e.g., cover, contain, auto"
+      /></dev>
+
+      <button id="generateBtn">افتح معايدتك</button>
+      <div id="imageContainer" class="image-container"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
