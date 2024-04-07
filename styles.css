@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #223246;
     margin: 0;
     padding: 0;
+
  
 }
 
@@ -87,3 +88,21 @@ position: absolute;
 top: 0;
 z-index: -1;
 }
+.end{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    z-index: -1;
+}
+#imgend{
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rakkas-regular {
+    font-family: "Rakkas", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

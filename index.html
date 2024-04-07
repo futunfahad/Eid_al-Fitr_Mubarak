@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Name Image Generator</title>
+    <meta
+      name="description"
+      content=" نادي التنمية المستدامة يهنئكم بقدوم عيد الفطر"
+    />
+    <meta property="og:title" content="يد الفطر " />
+    <meta
+      property="og:description"
+      content="نادي التنمية المستدامة يهنئكم بقدوم عيد الفط"
+    />
+    <title>عيد الفطر</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <head>
-      <img src="pngegg.png" alt="" srcset="" class="aid" />
+      <img src="background1.png" alt="" srcset="" class="aid" />
     </head>
     <div class="container">
-      <h1>عيدكم مبارك</h1>
-      <label for="nameInput">ادخل اسمك</label>
-      <input type="text" id="nameInput" placeholder="Your Name" />
-      <dev class="hidden">
-        <label for="backgroundSizeInput">Background Image Size:</label>
+      <h1 id="pageTitle" class="rakkas-regular">عيدكم مبارك</h1>
+      <label for="nameInput" id="nameLabel">ادخل اسمك</label>
+      <input type="text" id="nameInput" placeholder="اسمك" />
+      <div class="hidden">
+        <label for="backgroundSizeInput" id="backgroundSizeLabel"
+          >حجم صورة الخلفية:</label
+        >
         <input
           type="text"
           id="backgroundSizeInput"
-          placeholder="e.g., cover, contain, auto"
-      /></dev>
-
+          placeholder="مثال: cover, contain, auto"
+        />
+      </div>
       <button id="generateBtn">افتح معايدتك</button>
       <div id="imageContainer" class="image-container"></div>
+      <div style="text-align: center; margin-top: 10px">
+        <button onclick="setLanguage('ar')">عربي</button>
+        <button onclick="setLanguage('en')">English</button>
+      </div>
+    </div>
+    <div class="end">
+      <img src="background2.png" alt="" srcset="" class="aid" id="imgend" />
     </div>
     <script src="script.js"></script>
   </body>
