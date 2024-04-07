@@ -55,13 +55,10 @@ document.getElementById('generateBtn').addEventListener('click', function() {
             var fontSize = Math.floor(canvasHeight * fontSizePercentage);
 
             // Draw name on the canvas
-            ctx.font = fontSize + 'px Arial';
-            var textWidth = ctx.measureText(name).width;
-            var textX = (canvasWidth - textWidth) / 2; // X position for centering text horizontally
-            var textY = (canvasHeight / 2)+(canvasHeight*0.351); // Y position for centering text vertically
-
-            ctx.fillStyle = '#000';
-            ctx.fillText(name, textX, textY); // Position the name in the middle
+            ctx.font = fontSize + 'px Rakkas';
+            ctx.fillStyle = '#4d645a';
+            ctx.textAlign = 'center'; // Center align the text
+            ctx.fillText(name, canvasWidth / 2, (canvasHeight / 2)+canvasHeight*0.38); // Position the name in the middle
 
             // Create a new image element for display
             var image = new Image();
@@ -72,14 +69,13 @@ document.getElementById('generateBtn').addEventListener('click', function() {
             // Create download link
             var downloadLink = document.createElement('a');
             downloadLink.classList.add('button-link');
-            downloadLink.textContent = 'حمل الصورة';
-            downloadLink.href = canvas.toDataURL('image/png');
+            downloadLink.textContent = button_link;
+            downloadLink.href = image.src; // Use the image source directly for download
             downloadLink.download = 'custom_image.png';
             imageContainer.appendChild(downloadLink);
         };
 
-        backgroundImage.src = 'image.jpg'; // Specify the path to your custom background image
-        backgroundImage.style.backgroundSize = backgroundSize; // Set background size for the image
+        backgroundImage.src = imagee; // Specify the path to your custom background image
     } else {
         alert('Please enter a name.');
     }
