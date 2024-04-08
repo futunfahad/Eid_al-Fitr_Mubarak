@@ -1,5 +1,10 @@
 var imagee = "arabiccard.jpeg";
 var button_link="حمل الصورة";
+document.addEventListener("DOMContentLoaded", function(event) {
+   document.querySelectorAll('img').forEach(function(img){
+   img.onerror = function(){this.style.display='none';};
+   })
+});
 function setLanguage(lang) {
     var pageTitle = document.getElementById('pageTitle');
     var nameLabel = document.getElementById('nameLabel');
