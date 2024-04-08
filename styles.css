@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 9rem;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -140,13 +140,4 @@ header{
 
 .border2{
     right: 0;
-}
-
-.logo{
-    width: 16%;
-    max-width: 180px;
-    display: block;
-    position: absolute;
-    top: 66%;
-    left: 13px;
 }
