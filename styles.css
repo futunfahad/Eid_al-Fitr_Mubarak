@@ -2,9 +2,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #223246;
     margin: 0;
-    padding: 0;
-
- 
+    padding: 41px;
+    background-image: url(background.png);
+    background-repeat: repeat;
+    height: 100%;
 }
 
 .container {
@@ -15,6 +16,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 9rem;
+    position: relative;
 }
 
 h1 {
@@ -82,11 +84,21 @@ canvas {
 .button-link:hover {
     background-color: #45a049; /* Darker green color on hover */
 }
-.aid{
-width: 100%;
-position: absolute;
-top: 0;
-z-index: -1;
+header{
+    width: 100%;
+    top: 0;
+    max-width: 1115px;
+    margin: auto;
+    display: block;
+    margin-top: -47px;
+    margin-bottom: -10px;
+    z-index: -1;
+    position: relative;
+}
+.lights{
+    width: 100%;
+    top: 0;
+    max-width: 1115px;
 }
 .end{
     width:100%;
@@ -106,3 +118,35 @@ z-index: -1;
     font-style: normal;
   }
   
+.background{
+    height: 100%;
+    margin: 0 10px;
+    display: inline;
+   position: absolute;
+   z-index: -2;
+}
+.border{
+  position: fixed;
+  top: 0;
+  max-width: 30px;
+  background-image: url(border.png);
+  z-index: 5;
+  width: 5%;
+  height: 100%;
+
+}
+.border1{
+    left: 0;}
+
+.border2{
+    right: 0;
+}
+
+.logo{
+    width: 16%;
+    max-width: 180px;
+    display: block;
+    position: absolute;
+    top: 66%;
+    left: 13px;
+}

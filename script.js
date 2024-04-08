@@ -26,7 +26,6 @@ function setLanguage(lang) {
     }
    // This will log the image path based on the selected language
 }
-console.log(imagee); 
 document.getElementById('generateBtn').addEventListener('click', function() {
     var name = document.getElementById('nameInput').value;
 
